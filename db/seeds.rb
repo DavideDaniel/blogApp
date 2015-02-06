@@ -6,21 +6,15 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-david = Author.create(
-	name: "David")
 
-alex = Author.create(
-	name: "Alex")
-
-
-Article.create(
-	headline: "Cat shovels snow for owner",
-    author: david,
+BlogPost.create(
+	title: "Cat shovels snow for owner",
+    author: "David",
 	content: "NYC cat owner Alex Deschamps was ecstatic this morning when he woke to an already shoveled driveway. He reported that his cat had worked hard through the early morning to ensure he did not have any problem getting to the pet food store. To show his gratitude Alex bought his cat Felix extra treats.",
 	)
 
-Article.create(
-	headline: "Cat destroys snow",
-    author: alex,
+BlogPost.create(
+	title: "Cat destroys snow",
+    author: "Alex",
 	content: "I woke up this morning excited to see all the freshly fallen snow last night. I found Felix had destroyed it before I could enjoy it. I've picked up something 'special' for him from the store. Let's see if he eats it.",
 	)
