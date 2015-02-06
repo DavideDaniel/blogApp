@@ -1,0 +1,29 @@
+
+<div class="container"> 
+<div class="col-xs-8">
+<ul class="nav nav-tabs" role="tablist">
+  <li><%= link_to 'Post feed', blog_post_index_path %></li>
+  <li class="active"><%= link_to 'Create post', new_blog_post_path %></li>
+</ul>
+<%= form_for @blog_post, url: {action: 'create'} do |f|  %>
+<%= f.label :title  %>
+<%= f.text_field :title  %>
+<br />
+<br />
+
+<%= f.label :author %>
+<%= f.text_field :author  %>
+<br>
+<br>
+
+<%= f.label :content %>
+<%= f.text_field :content  %>
+<br>
+<br>
+
+<%= f.submit %>
+<% end  %>
+</div>
+</div>
+<br>
+<%= link_to 'Cancel', blog_post_index_path, class: 'btn btn-danger btn-md' %>

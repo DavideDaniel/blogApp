@@ -1,0 +1,8 @@
+  <h2><%= @blog_post.title %></h2>
+  <h3>by <%= @blog_post.author %></h3>
+  <%= @blog_post.content %>
+
+<br>
+<%= link_to 'Back', blog_post_index_path, class: 'btn btn-danger btn-md'   %>
+<%= link_to 'Edit', edit_blog_post_path(@blog_post), class: 'btn btn-primary btn-md' %>
+<%= link_to 'Delete', @blog_post, class: 'btn btn-danger btn-md', method: :delete %>
