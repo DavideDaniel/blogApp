@@ -3,11 +3,15 @@
       <div class="row">
 
       <div class="col-xs-8">
-<%= form_for(@blog_post, html: {class: 'form-horizontal', action: 'update'}) do |f| %>
-<% if @blog_post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@blog_post.errors.count, "error") %> prohibited this blog_post from being saved:</h2>
-<% end %>
+<ul class="nav nav-tabs" role="tablist">
+  <li><%= link_to 'Post feed', blogposts_path %></li>
+  <li class="active"><%= link_to 'Create post', new_blogpost_path %></li>
+</ul>
+
+
+<%= form_for 'blogposts#new', html: {class: 'form-horizontal', action: 'create'} do |f| %>
+
+
 <div class="field form-group">
 <%= f.label :title, class: 'col-sm-2 control-label'  %>
 <div class="col-sm-8">
@@ -27,7 +31,7 @@
 <br /><br />
 <div class="actions form-group">
 <div class="col-sm-10">
-<%= f.submit %>
+<%= f.submit 'Submit', class: 'btn btn-primary'  %>
 
 </div>
 </div>
@@ -36,8 +40,7 @@
 
 <br>
 
-<%= link_to 'Cancel', blog_post_index_path, class: 'btn btn-danger'  %>
+<%= link_to 'Cancel', blogposts_path, class: 'btn btn-danger'  %>
 </div>
 </div>
 </div>  
-

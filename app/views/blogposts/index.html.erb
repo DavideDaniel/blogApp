@@ -1,0 +1,20 @@
+
+
+<div class="container"> 
+<div class="col-xs-8">
+<ul class="nav nav-tabs" role="tablist">
+  <li class="active"><%= link_to 'Post feed', blogposts_path %></li>
+  <li><%= link_to 'Create post', new_blogpost_path %></li>
+</ul>
+ <h1>Welcome to our blog!</h1>
+  <% @blogposts.each do |blogpost| %>
+  <h2><%= link_to blogpost.title, blogpost_path(blogpost) %></h2>
+  <h3>by <%= blogpost.author %></h3>
+  <%= blogpost.content %>
+  <% end %>
+</div>
+<div class="col-xs-3">
+
+
+ </div>
+ </div>
